@@ -6,54 +6,33 @@ export const Container = styled.div`
 
     background: #D4E4FD;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media(min-width: 800px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
 `;
 
 export const ContainerLeft = styled.div`
-    width: 50vw;
-    padding: 50px;
-    margin-top: 200px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .title{
         color: #000;
-        font-size: 36px;
-        margin-bottom: 50px;
+        font-size: 28px;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
-    
-    > form {
+
+    >form {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        > input {
-            width: 552px;
-            height: 64px;
-            background: #EDEDED;
-            border-radius: 20px;
-            border: none;
-            margin: 8px 10px;
-            outline: none;
-            padding: 10px 20px;
-            font: 15px Roboto;
-        }
-
-        > button {
-            background: #2B63FF;
-            border-radius: 20px;
-            border: none;
-            color: #fff;
-            outline:none;
-            
-            width: 552px;
-            height: 64px;
-            margin: 30px 10px;
-
-            cursor: pointer;
-        }
     }
 
     > div {
@@ -69,10 +48,40 @@ export const ContainerLeft = styled.div`
             }
         }
     }
+
+    @media(min-width: 800px){
+        margin-left: 100px;
+
+        justify-content: center;
+    }
 `;
 
 export const ContainerRight = styled.div`
-    width: 50vw;
+    display: none;
+
+    @media(min-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 50px;
+        margin-right: 70px;
+
+        .logo {
+            > img {
+                width: 40vw;
+            }
+        }
+
+        .calendar {
+            > img {
+                width: 30vw;
+                margin-top: 40px;
+            }
+        }
+    }
+/*
+width: 50vw;
     margin-top: 100px;
 
     display: flex;
@@ -83,6 +92,6 @@ export const ContainerRight = styled.div`
         .logo{
             margin-bottom: 50px;
         }
- 
+ */
 
 `;

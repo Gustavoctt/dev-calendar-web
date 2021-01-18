@@ -4,38 +4,76 @@ export const Container = styled.div`
     width: 100vw;
     height: 100vh;
 
-    background: #D4E4FD;
+    background: #D4E4FD;    
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media(min-width: 800px) {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: row;
+
+      }
 `;
 
 export const ContainerLeft = styled.div`
-    width: 60vw;
+    width: 100vw;
 
     display:flex;
     flex-direction: column;
     align-items: center;
 
-    margin-top: 100px;
-
     .logo{
-        margin-bottom: 100px;    
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        > img {
+            width: 50vw;
+            margin-top: 30px;
+        }
+            
     }
+
+    .calendar {
+        display:none;    
+    }
+
+    @media(min-width: 800px) {
+        width: 100vw;
+        height: 100vh;
+
+        .logo{
+            > img {
+                width: 40vw;
+                margin-top: 30px;
+            }
+                
+        }
+        .calendar {
+            display:flex;
+            
+            >img {
+                width: 40vw;
+            }
+        }
+      }
 `;
 
 export const ContainerRight = styled.div`
-    width: 40vw;
-
     display:flex;
     flex-direction: column;
     align-items:center;
-    margin-top: 200px;
-    
+
+    margin-top: 80px;
 
     .title{
         color: #000;
-        font-size: 36px;
-        margin-bottom: 50px;
+        font-size: 30px;
+        margin-bottom: 40px;
         
     }
 
@@ -47,8 +85,6 @@ export const ContainerRight = styled.div`
         width: 100%;
 
         > input{
-            width: 552px;
-            height: 64px;
             background: #EDEDED;
             border-radius: 20px;
             border: none;
@@ -83,4 +119,9 @@ export const ContainerRight = styled.div`
             margin: 10px 10px;
         }
     }
+
+    @media(min-width: 800px) {
+      margin-right: 60px;
+
+      }
 `;

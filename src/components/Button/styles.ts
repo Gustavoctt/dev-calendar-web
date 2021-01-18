@@ -7,7 +7,7 @@ export const ButtonAll = styled.button`
     color: #fff;
     outline:none;
     
-    width: 552px;
+    width: 452px;
     height: 64px;
     margin: 30px 10px;
 

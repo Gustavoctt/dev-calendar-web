@@ -6,54 +6,30 @@ export const Container = styled.div`
 
     background: #D4E4FD;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media(min-width: 800px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 `;
 
 export const ContainerLeft = styled.div`
-    width: 50vw;
-    padding: 50px;
-    margin-top: 100px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .title{
         color: #000;
-        font-size: 36px;
-        margin-bottom: 50px;
+        font-size: 30px;
+        margin: 20px 0;
     }
-    
+
     > form {
         display: flex;
         flex-direction: column;
-        align-items: center;
-
-        > input {
-            width: 552px;
-            height: 64px;
-            background: #EDEDED;
-            border-radius: 20px;
-            border: none;
-            margin: 8px 10px;
-            outline: none;
-            padding: 10px 20px;
-            font: 15px Roboto;
-        }
-
-        > button {
-            background: #2B63FF;
-            border-radius: 20px;
-            border: none;
-            color: #fff;
-            outline:none;
-            
-            width: 552px;
-            height: 64px;
-            margin: 30px 10px;
-
-            cursor: pointer;
-        }
+        justify-content: center;
     }
 
     > div {
@@ -69,20 +45,35 @@ export const ContainerLeft = styled.div`
             }
         }
     }
+
+    @media(min-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const ContainerRight = styled.div`
-    width: 50vw;
-    margin-top: 100px;
+    display: none;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @media(min-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
 
-    
-        .logo{
-            margin-bottom: 50px;
+        .logo {
+            > img {
+                width: 40vw;
+                margin-top: 40px;
+            }
         }
- 
+
+        .calendar {
+            > img {
+                width: 30vw;
+                margin-top: 40px;
+            }
+        }
+    }
 
 `;
