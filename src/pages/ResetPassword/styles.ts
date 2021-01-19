@@ -11,23 +11,7 @@ export const Container = styled.div`
 
     background: #D4E4FD;
 
-    > img {
+    img {
         margin-bottom: 60px;
-    }
-
-    > form {
-        > button {
-            background: #2B63FF;
-                border-radius: 20px;
-                border: none;
-                color: #fff;
-                outline:none;
-                
-                width: 552px;
-                height: 64px;
-                margin: 30px 10px;
-
-                cursor: pointer;
-        }
     }
 `

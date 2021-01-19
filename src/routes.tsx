@@ -6,6 +6,8 @@ import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 
+import Dashboard from './pages/Dashboard';
+
 
 const Routes = () => {
     return(
@@ -14,6 +16,8 @@ const Routes = () => {
             <Route component={SignUp} path="/signup" />
             <Route component={ForgotPassword} path="/forgot" />
             <Route component={ResetPassword} path="/reset" />
+
+            <Route component={Dashboard} path="/dashboard" />
         </BrowserRouter>
     )
 }
