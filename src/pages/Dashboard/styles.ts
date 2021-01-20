@@ -7,64 +7,29 @@ export const Container = styled.div`
     background: #D4E4FD;
 `;
 
-export const Header = styled.div`
-    width: 100vw;
-    height: 15vh;
-
-    background: #CAD8ED;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    > img {
-        width: 30vw;
-    }
-
-    .link {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        > strong {
-            color: #323232;
-            margin-right: 10px;
-            text-decoration: none;
-        }
-
-        > img {
-            width: 8vw;
-            border-radius: 50%;
-        }
-    }
-
-    @media(min-width: 800px) {
-        height: 25vh;
-
-        > img {
-            width: 20vw;
-        }
-
-        .link {
-            > img{
-                margin-left: 20px;
-            }
-        }
-    }
-`;
-
 export const Content = styled.div`
     max-width: 1120px;
     margin: 36px auto;
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
+    @media(min-width: 800px) {
+      display: flex;
+      flex-direction: row;
+    }
 `;
 
 export const Aside = styled.div``;
 
 export const Calendar = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 60px;
+
     .DayPicker {
         border-radius: 10px;
     }
@@ -134,4 +99,51 @@ export const Calendar = styled.div`
     border-radius: 10px;
     color: #fff !important;
   }
+`;
+
+export const ContainerRigth = styled.div`
+    max-width: 600px;
+    width: 100%;
+
+    > div {
+      > span {
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #323232;
+      }
+
+      > p {
+        > span {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: #2B63FF;
+          font-size: 18px;
+        }
+      }
+    }
+`;
+
+export const Event = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: #CAD8ED;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-top: 15px;
+
+    > strong {
+      color: #323232;;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+
+      > span {
+        color: #7c7c7c;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-right: 10px;
+      }
+    }
 `;

@@ -7,6 +7,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 
 import Dashboard from './pages/Dashboard';
+import CreateEvent from './pages/CreateEvent';
 
 
 const Routes = () => {
@@ -18,6 +19,8 @@ const Routes = () => {
             <Route component={ResetPassword} path="/reset" />
 
             <Route component={Dashboard} path="/dashboard" />
+            <Route component={CreateEvent} path="/create-event" />
+
         </BrowserRouter>
     )
 }
