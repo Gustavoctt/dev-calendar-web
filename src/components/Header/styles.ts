@@ -1,14 +1,38 @@
 import styled from 'styled-components';
 
 export const Headers = styled.div`
-    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #Cad8ed;
+
+    > img {
+        width: 200px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        > img {
+            padding: 10px;
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+
+ /*   width: 100%;
     height: 15vh;
 
     background: #CAD8ED;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     .goBack {
@@ -62,5 +86,5 @@ export const Headers = styled.div`
                 margin-left: 20px;
             }
         }
-    }
+    }*/
 `;

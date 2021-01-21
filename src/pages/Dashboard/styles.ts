@@ -2,54 +2,84 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100vw;
-    height: 100vh;
+    height: auto;
 
     background: #D4E4FD;
+
+`;
+
+export const Header = styled.div`
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #Cad8ed;
+
+    > img {
+        width: 200px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        > img {
+            padding: 10px;
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+`;
+
+export const ContainerLeft = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > Button {
+      margin-top: 0px;
+    }
+
+    @media(min-width: 800px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      width: 700px;
+    }
 `;
 
 export const Content = styled.div`
-    max-width: 1120px;
-    margin: 36px auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @media(min-width: 800px) {
+    @media(min-width: 800px){
       display: flex;
       flex-direction: row;
     }
 `;
 
-export const Aside = styled.div``;
-
 export const Calendar = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-left: 60px;
+  margin: 20px 10px;
 
     .DayPicker {
-        border-radius: 10px;
-    }
-
-    .DayPicker-wrapper{
-        padding-bottom: 0;
-        background: #7c7c7c;
-        border-radius: 10px;
-    }
-
-    .DayPicker,
-    .DayPicker-Month {
-        width: 100%;
-    }
-
-    .DayPicker-NavBar {
-    color: #fff !important;
-    }
-
-    .DayPicker-NavButton--prev {
+    border-radius: 10px;
+  }
+  .DayPicker-wrapper {
+    padding-bottom: 0;
+    background: #7c7c7c;
+    border-radius: 10px;
+  }
+  .DayPicker,
+  .DayPicker-Month {
+    width: 100%;
+  }
+  .DayPicker-NavBar {
+    color: #7C7C7C !important;
+  }
+  .DayPicker-NavButton--prev {
     right: auto;
     left: 1.5em;
     margin-right: 0;
@@ -63,8 +93,8 @@ export const Calendar = styled.div`
     border-spacing: 8px;
     margin: 16px 0 0 0;
     padding: 16px;
+    background-color: #CAD8ED;
     border-radius: 0 0 10px 10px;
-    background: #CAD8ED;
   }
   .DayPicker-Caption {
     margin-bottom: 1em;
@@ -79,9 +109,9 @@ export const Calendar = styled.div`
     height: 40px;
   }
   .DayPicker-Day--available:not(.DayPicker-Day--outside) {
-    background: #fff;
+    background: #D4E4FD;
     border-radius: 10px;
-    color: #7C7C7C;
+    color: #323232;
     font-weight: 500;
   }
   .DayPicker:not(.DayPicker--interactionDisabled)
@@ -90,10 +120,6 @@ export const Calendar = styled.div`
   .DayPicker-Day--today {
     font-weight: normal;
   }
-  /* .DayPicker-Day--disabled {
-    color: #666360 !important;
-    background: transparent !important;
-  } */
   .DayPicker-Day--selected {
     background: #2B63FF !important;
     border-radius: 10px;
@@ -102,48 +128,63 @@ export const Calendar = styled.div`
 `;
 
 export const ContainerRigth = styled.div`
-    max-width: 600px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
 
-    > div {
+  > div {
+    margin-left: 20px;
+
+    > span {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 36px;
+    }
+
+    > p {
       > span {
-        font-size: 30px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #323232;
-      }
-
-      > p {
-        > span {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          color: #2B63FF;
-          font-size: 18px;
-        }
+        font-size: 16px;
+        color: #2B63FF;
       }
     }
+  }
+
+  @media(min-width: 800px){
+      display: flex;
+      flex-direction: column;
+
+      margin: 20px 0px;
+    }
+
 `;
 
 export const Event = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
+    padding: 20px 20px;
     background: #CAD8ED;
-    padding: 20px 30px;
-    border-radius: 8px;
-    margin-top: 15px;
+    margin: 10px;
+    border-radius: 10px;
 
     > strong {
-      color: #323232;;
+      color: #323232;
     }
 
     > div {
       display: flex;
-      align-items: center;
+      justify-content: center;
 
       > span {
         color: #7c7c7c;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin-right: 10px;
+        margin-right: 5px;
       }
     }
+
+    @media(min-width: 800px){
+      width: 600px;
+      max-width: 700px;
+    }
+
 `;

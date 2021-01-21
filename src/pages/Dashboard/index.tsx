@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { FiInfo } from 'react-icons/fi';
 
 import 'react-day-picker/lib/style.css';
-import { Container, Content, Aside, Calendar, ContainerRigth, Event } from './styles';
+import { Container, Header, ContainerLeft, Content, Calendar, ContainerRigth, Event } from './styles';
 
-import Header from '../../components/Header';
+import Button from '../../components/Button';
 import logo from '../../utils/images/Logo.svg';
 
 const Dashboard: React.FC = () => {
@@ -15,9 +15,16 @@ const Dashboard: React.FC = () => {
 
   return (
     <Container>
-      <Header/>
+      <Header>
+        <img src={logo} alt="Dev Calendar"/>
+
+        <Link to="/profile" className="link">
+          <strong>Gustavo Tartare</strong>
+          <img src="https://avatars1.githubusercontent.com/u/44401595?s=460&u=71939b487a5d2b5f5f630944697ef38610193449&v=4" alt="avatar"/>
+        </Link>
+      </Header>
         <Content>
-          <Aside>
+          <ContainerLeft>
             <Calendar>
               <DayPicker
                 modifiers = {{
@@ -29,7 +36,11 @@ const Dashboard: React.FC = () => {
                 onDayClick = { () => {}}
               />
             </Calendar>
-          </Aside>
+
+            <Button
+              name="Add new Event"
+            />
+          </ContainerLeft>
 
           <ContainerRigth>
             <div>
@@ -58,7 +69,7 @@ const Dashboard: React.FC = () => {
               </div>
             </Event>
           </ContainerRigth>
-        </Content>
+          </Content>
     </Container>
     );
 }
